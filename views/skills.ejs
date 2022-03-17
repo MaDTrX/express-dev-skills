@@ -1,0 +1,12 @@
+<%- include('partials/header') %> 
+    <ul>
+      <% skills.forEach((skill, idx) => {  %>
+<%console.log() %>
+            <li> 
+                <a href="/<%=idx%>" >
+              <%= skill %>
+                </a></li>
+        <% }) %>
+    </ul>
+    
+ <%- include('partials/footer') %> 
