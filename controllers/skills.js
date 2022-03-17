@@ -20,16 +20,17 @@ function displayOne(req, res) {
     })
 }
 function addedSkills(req, res) {
-    Skills.addSkills(req.params.body)
-    res.redirect('/skills')
+    Skills.addSkills(req.body)
+    res.redirect('/')
 }
 function updatedSkills(req, res) {
-    Skills.updtSkill(req.params.id, req.params.body)
-    res.redirect('/skills')
+    console.log(req.body)
+    Skills.updtSkill(req.params.id, req.body)
+    res.redirect('/')
 }
 function deletedSkills(req, res) {
     Skills.frgtSkills(req.params.id)
-    res.redirect('/skills')
+    res.redirect('/')
 
 }
 

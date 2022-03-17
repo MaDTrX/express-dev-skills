@@ -1,4 +1,4 @@
-const skills = ["Functional Programming", "Asynchronous Programming", "Node JS", "jQuery", "HTML / CSS", "Express Js", "React Js", "MongoDB", "Java", "Django", "Python", "Ruby", "Ruby on Rails" ]
+const skills = ["Functional Programming", "Asynchronous Programming", "Node JS", "jQuery", "HTML / CSS"]
 module.exports = {
     allSkills,
     showOne,

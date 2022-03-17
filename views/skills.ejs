@@ -1,12 +1,34 @@
 <%- include('partials/header') %> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+ function showSkills() { 
+    $("button").on('click', function(){
+  document.querySelector("ul").style.display = "flex";
+  $('button').fadeOut();
+ })
+
+ 
+
+
+}
+</script>
+
+
+<div><button id="skillBtn" onclick="showSkills()">Skills</button></div>
+ 
     <ul>
       <% skills.forEach((skill, idx) => {  %>
-<%console.log() %>
+<%//console.log(skill) %>
             <li> 
                 <a href="/<%=idx%>" >
               <%= skill %>
-                </a></li>
+                </a>
+            </li>
         <% }) %>
+        <div id="create">
+            <a href="/new">add new skill</a>
+        </div>
     </ul>
     
  <%- include('partials/footer') %> 
