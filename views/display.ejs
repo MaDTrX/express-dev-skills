@@ -13,7 +13,13 @@ function editSkill() {
         <input type="text" name="edit"></input>
         <%= skill %> 
         </form>
-        <button class="delete">💀</button>
+        
+        <form action="/<%=skills.indexOf(skill)%>?_method=DELETE"
+            class="delete-form" method="POST">
+           
+            <button type="submit" class="delete">💀</button>
+         
+              </form>
     </li>
 </ul>
 
