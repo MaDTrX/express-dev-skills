@@ -1,0 +1,22 @@
+<%- include('partials/header') %> 
+<link rel="stylesheet" href="sheets/style2.css">
+<script src="scripts/button.js" defer></script>
+<%- include('partials/mid') %> 
+
+<script>
+function addSkill() {
+    let inputBox = document.querySelector('input')
+    inputBox.style.display = "flex"
+}
+
+</script>
+<ul class="skill" >
+    <li>
+        <button class="edit" onclick="addSkill()">✏️</button>
+        <form action="/<%=skills.indexOf(skill)%>" method="POST" autocomplete="off">
+        <input type="text" name="skill"></input>
+        </form>
+    </li>
+</ul>
+
+<%- include('partials/footer') %> 

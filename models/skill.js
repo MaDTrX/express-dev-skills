@@ -13,10 +13,10 @@ function showOne(id) {
   return skills.find((skillEl, idx) => idx == id)  
 }
 function addSkills(skill){
-  return skills.push(`${skill}`)
+  return skills.push(`${skill.skill}`)
 }
 function updtSkills(id, skill) {
-  return skills.splice(id, 1, skill)
+  return skills.splice(id, 1, skill.skill)
 }
 function frgtSkills(id) {
   return skills.splice(id,1)

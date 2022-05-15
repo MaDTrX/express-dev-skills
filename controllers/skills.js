@@ -14,20 +14,29 @@ function mySkills(req, res) {
     })
 }
 function displayOne(req, res) {
-    console.log(Skills.showOne(req.params.id))
+   // console.log(Skills.showOne(req.params.id))
     res.render('display', {
         skill: Skills.showOne(req.params.id),
         skills: Skills.allSkills()
     })
 }
 function addedSkills(req, res) {
-    Skills.addSkills(req.params.body)
-    res.redirect('/')
+    //console.log(req.body)
+    Skills.addSkills(req.body)
+    res.render('new', {
+        skill: Skills.showOne(req.params.id),
+        skills: Skills.allSkills()
+    })
 }
+
 function updatedSkills(req, res) {
-    Skills.updtSkill(req.params.id, req.params.body)
+    console.log("3",req.body)
+    console.log("4", req.params.id)
+    Skills.updtSkill(req.params.id, req.body)
+    Skills.allSkills()
     res.redirect('/')
 }
+
 function deletedSkills(req, res) {
     Skills.frgtSkills(req.params.id)
     res.redirect('/')
